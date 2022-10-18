@@ -1,0 +1,22 @@
+<table border="1">
+<thead>
+    <tr>
+      <th>sl. No.</th>
+      <th>Name</th>
+      <th>Actions</th>
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let data of testList; let i=index">
+        <td>
+        {{ i+1 }}
+        </td>
+        <td>
+        {{ data.name }}
+        </td>
+        <td>
+            <a href="javascript:" [routerLink]="['component/', data.id]">{{ data.name }}</a>
+        </td>
+    </tr>
+</tbody>
+</table>
